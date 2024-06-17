@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         id="WebApp_ID" version="4.0">
+    <display-name>ErgasiaKellogs</display-name>
+
+    <welcome-file-list>
+        <welcome-file>register.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Declaration of PlanServlet -->
+    <servlet>
+        <servlet-name>PlanServlet</servlet-name>
+        <servlet-class>controller.PlanServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PlanServlet</servlet-name>
+        <url-pattern>/viewPlans</url-pattern>
+    </servlet-mapping>
+
+    <!-- Declaration of CustomerServlet -->
+   <servlet>
+    <servlet-name>CustomerServlet</servlet-name>
+    <servlet-class>controller.CustomerServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>CustomerServlet</servlet-name>
+    <url-pattern>/registerCustomer</url-pattern>
+</servlet-mapping>
+
+
+    <!-- Declaration of controller.CustomerServlet (assuming this is a typo fix) -->
+    <servlet>
+        <servlet-name>controller.CustomerServlet</servlet-name>
+        <servlet-class>controller.CustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>controller.CustomerServlet</servlet-name>
+        <url-pattern>/controller/register</url-pattern>
+    </servlet-mapping>
+
+</web-app>
